@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Background Changer",
+    "version": "1.0",
+    "description": "Changes the background of YouTube to a linked image.",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.youtube.com/*"
+            ],
+            "js": [
+                "app.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
